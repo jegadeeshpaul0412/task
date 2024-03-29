@@ -1,0 +1,38 @@
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~ (master)
+$ cd Documents/
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents (master)
+$ mkdir exercises
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents (master)
+$ cd exercises/
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents/exercises (master)
+$ mkdir exercise1
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents/exercises (master)
+$ cd exercise1/
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents/exercises/exercise1 (master)
+$ touch script1.sh
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents/exercises/exercise1 (master)
+$ sh script1.sh
+Hello! What's your name?
+jegadeesh
+Nice to meet you, jegadeesh!
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents/exercises/exercise1 (master)
+$ cat script1.sh
+#!/bin/bash
+
+# Prompt the user for their name
+echo "Hello! What's your name?"
+
+# Read user input
+read name
+
+# Greet the user
+echo "Nice to meet you, $name!"
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents/exercises/exercise1 (master)
