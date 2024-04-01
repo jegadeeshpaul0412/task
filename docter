@@ -1,0 +1,127 @@
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents/exercises/exercise3 (master)
+$ ssh -i jegadeesh-key.pem ec2-user@34.220.197.75
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ec2-user@ip-172-31-22-176 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-22-176 ~]$ sudo yum update -y    # For Amazon Linux
+sudo apt update       # For Ubuntu
+Last metadata expiration check: 0:23:10 ago on Fri Mar 29 18:49:54 2024.
+Dependencies resolved.
+Nothing to do.
+Complete!
+sudo: apt: command not found
+[ec2-user@ip-172-31-22-176 ~]$ sudo yum install docker -y
+Last metadata expiration check: 0:24:50 ago on Fri Mar 29 18:49:54 2024.
+Dependencies resolved.
+=======================================================================================================
+ Package                                                  Architecture                             Vers
+=======================================================================================================
+Installing:
+ docker                                                   x86_64                                   25.0
+Installing dependencies:
+ containerd                                               x86_64                                   1.7.
+ iptables-libs                                            x86_64                                   1.8.
+ iptables-nft                                             x86_64                                   1.8.
+ libcgroup                                                x86_64                                   3.0-
+ libnetfilter_conntrack                                   x86_64                                   1.0.
+ libnfnetlink                                             x86_64                                   1.0.
+ libnftnl                                                 x86_64                                   1.2.
+ pigz                                                     x86_64                                   2.5-
+ runc                                                     x86_64                                   1.1.
+
+Transaction Summary
+=======================================================================================================
+Install  10 Packages
+
+Total download size: 83 M
+Installed size: 313 M
+Downloading Packages:
+(1/10): iptables-libs-1.8.8-3.amzn2023.0.2.x86_64.rpm
+(2/10): pigz-2.5-1.amzn2023.0.3.x86_64.rpm
+(3/10): libnfnetlink-1.0.1-19.amzn2023.0.2.x86_64.rpm
+(4/10): libcgroup-3.0-1.amzn2023.0.1.x86_64.rpm
+(5/10): runc-1.1.11-1.amzn2023.0.1.x86_64.rpm
+(6/10): libnftnl-1.2.2-2.amzn2023.0.2.x86_64.rpm
+(7/10): libnetfilter_conntrack-1.0.8-2.amzn2023.0.2.x86_64.rpm
+(8/10): iptables-nft-1.8.8-3.amzn2023.0.2.x86_64.rpm
+(9/10): containerd-1.7.11-1.amzn2023.0.1.x86_64.rpm
+(10/10): docker-25.0.3-1.amzn2023.0.1.x86_64.rpm
+-------------------------------------------------------------------------------------------------------
+Total
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :
+  Installing       : runc-1.1.11-1.amzn2023.0.1.x86_64
+  Installing       : containerd-1.7.11-1.amzn2023.0.1.x86_64
+  Running scriptlet: containerd-1.7.11-1.amzn2023.0.1.x86_64
+  Installing       : libnftnl-1.2.2-2.amzn2023.0.2.x86_64
+  Installing       : libcgroup-3.0-1.amzn2023.0.1.x86_64
+  Installing       : libnfnetlink-1.0.1-19.amzn2023.0.2.x86_64
+  Installing       : libnetfilter_conntrack-1.0.8-2.amzn2023.0.2.x86_64
+  Installing       : iptables-libs-1.8.8-3.amzn2023.0.2.x86_64
+  Installing       : iptables-nft-1.8.8-3.amzn2023.0.2.x86_64
+  Running scriptlet: iptables-nft-1.8.8-3.amzn2023.0.2.x86_64
+  Installing       : pigz-2.5-1.amzn2023.0.3.x86_64
+  Running scriptlet: docker-25.0.3-1.amzn2023.0.1.x86_64
+  Installing       : docker-25.0.3-1.amzn2023.0.1.x86_64
+  Running scriptlet: docker-25.0.3-1.amzn2023.0.1.x86_64
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /usr/lib/systemd/system/docker
+
+  Verifying        : iptables-libs-1.8.8-3.amzn2023.0.2.x86_64
+  Verifying        : pigz-2.5-1.amzn2023.0.3.x86_64
+  Verifying        : containerd-1.7.11-1.amzn2023.0.1.x86_64
+  Verifying        : libnfnetlink-1.0.1-19.amzn2023.0.2.x86_64
+  Verifying        : libcgroup-3.0-1.amzn2023.0.1.x86_64
+  Verifying        : docker-25.0.3-1.amzn2023.0.1.x86_64
+  Verifying        : runc-1.1.11-1.amzn2023.0.1.x86_64
+  Verifying        : libnftnl-1.2.2-2.amzn2023.0.2.x86_64
+  Verifying        : libnetfilter_conntrack-1.0.8-2.amzn2023.0.2.x86_64
+  Verifying        : iptables-nft-1.8.8-3.amzn2023.0.2.x86_64
+
+Installed:
+  containerd-1.7.11-1.amzn2023.0.1.x86_64         docker-25.0.3-1.amzn2023.0.1.x86_64
+  libcgroup-3.0-1.amzn2023.0.1.x86_64             libnetfilter_conntrack-1.0.8-2.amzn2023.0.2.x86_64
+  pigz-2.5-1.amzn2023.0.3.x86_64                  runc-1.1.11-1.amzn2023.0.1.x86_64
+
+Complete!
+[ec2-user@ip-172-31-22-176 ~]$ sudo service docker start
+Redirecting to /bin/systemctl start docker.service
+[ec2-user@ip-172-31-22-176 ~]$ sudo usermod -aG docker $USER
+[ec2-user@ip-172-31-22-176 ~]$ id
+uid=1000(ec2-user) gid=1000(ec2-user) groups=1000(ec2-user),4(adm),10(wheel),190(systemd-journal) conte
+[ec2-user@ip-172-31-22-176 ~]$ docker --version
+Docker version 25.0.3, build 4debf41
+[ec2-user@ip-172-31-22-176 ~]$ docker images
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/images/json": dial unix /var/run/docker.sock: connect: permission denied
+[ec2-user@ip-172-31-22-176 ~]$ exit
+logout
+Connection to 34.220.197.75 closed.
+
+JEGA PAUL@LAPTOP-I6AKSK96 MINGW64 ~/Documents/exercises/exercise3 (master)
+$ ssh -i jegadeesh-key.pem ec2-user@34.220.197.75
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Fri Mar 29 19:06:50 2024 from 117.217.171.224
+[ec2-user@ip-172-31-22-176 ~]$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+[ec2-user@ip-172-31-22-176 ~]$
